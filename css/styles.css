@@ -66,11 +66,30 @@ textarea {
 }
 
 .container {
-  width: 1158px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
 }
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 428px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1160px;
+  }
+}
+
 
 .section {
   padding-top: 120px;
@@ -78,7 +97,31 @@ textarea {
 }
 
 /*----- Header ----- */
+.header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.header-list {
+  display: none;
+}
+.header-contacts-list {
+  display: none;
+}
 
+.header-logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.33;
+  align-items: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-color);
+}
+.logo-studio {
+  color: var(--dark-color);
+}
+/* 
 .header {
   position: fixed;
   width: 100%;
@@ -170,7 +213,7 @@ textarea {
 .header-contacts-link:hover,
 .header-contacts-link:focus {
   color: var(--primary-color);
-}
+} */
 
 /*-------------- Hero ------------- */
 .hero {
