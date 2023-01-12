@@ -96,10 +96,20 @@ textarea {
 }
 
 /*----- Header ----- */
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+  background-color: var(--background-white-color);
+}
 .header > .container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 .header-logo {
   font-family: "Raleway", sans-serif;
@@ -120,17 +130,201 @@ textarea {
     padding-top: 24px;
     padding-bottom: 24px;
   }
+  .header > .container {
+    justify-content: space-between;
+  }
   .header-list {
     display: none;
   }
-  address {
+  .header-address {
     display: none;
+  }
+  .header-mobile-menu {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+
+    top: 0;
+    left: 0;
+    background-color: var(--background-white-color);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  .mobile-menu-container {
+    padding: 40px 40px;
+  }
+  .mobile-menu-close-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 24px;
+    height: 24px;
+    margin-left: auto;
+    margin-bottom: 16px;
+
+    background: #e7e9fc;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .mobile-menu-list {
+  }
+  .mobile-menu-item {
+    margin-bottom: 40px;
+  }
+  .mobile-menu-item:last-child {
+    margin-bottom: 284px;
+  }
+  .mobile-menu-link {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: var(--dark-color);
   }
   .header-menu-open {
     background-color: transparent;
     border: none;
     padding: 0;
     line-height: 0;
+  }
+  .header-mobile-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .mobile-address-item {
+    margin-bottom: 40px;
+  }
+  .mobile-address-item:last-child {
+    margin-bottom: 48px;
+  }
+  .mobile-address-tel {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 1.11;
+    text-transform: capitalize;
+    color: var(--primary-color);
+  }
+  .mobile-address-mail {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--body-text-color);
+  }
+  .mobile-soc-list {
+    display: flex;
+    align-items: center;
+    gap: 56px;
+  }
+  .mobile-soc-item {
+    width: 40px;
+    height: 40px;
+  }
+  .mobile-soc-link {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    fill: var(--light-background-color);
+  }
+}
+@media screen and (min-width: 768px) {
+  .header-menu-open {
+    display: none;
+  }
+  .header-mobile-menu {
+    display: none;
+  }
+  .header-navigation {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+  }
+  .header-logo {
+    margin-right: 123px;
+  }
+  .header-list {
+    display: flex;
+    gap: 40px;
+  }
+  .header-link {
+    position: relative;
+    display: block;
+    padding-bottom: 28px;
+    padding-top: 24px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--dark-color);
+
+    transition: color 250ms var(--timing-fn);
+  }
+  .header-link:hover,
+  .header-link:focus {
+    color: var(--button-avtive-color);
+  }
+  .current {
+    color: var(--button-avtive-color);
+  }
+  .header-link.current::after {
+    content: "";
+    display: block;
+
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--button-avtive-color);
+  }
+  .header-contacts-link {
+    font-style: normal;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.04em;
+    color: var(--body-text-color);
+
+    transition: color 250ms var(--timing-fn);
+  }
+  .header-contacts-link:hover,
+  .header-contacts-link:focus {
+    color: var(--primary-color);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header-logo {
+    margin-right: 76px;
+  }
+  .header-contacts-list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+  .header-contacts-link {
+    font-style: normal;
+    font-size: 12px;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--body-text-color);
+
+    transition: color 250ms var(--timing-fn);
   }
 }
 /* 
@@ -229,6 +423,62 @@ textarea {
 
 /*-------------- Hero ------------- */
 .hero {
+  padding-top: 112px;
+  padding-bottom: 112px;
+
+  text-align: center;
+
+  background-color: var(--dark-color);
+  background-image: var(--bg-gradient), url("../images/image_bg_mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  height: 432px;
+  max-width: 428px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero-title {
+  max-width: 320px;
+  margin-right: auto;
+  margin-left: auto;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--text-white-color);
+}
+
+.hero-btn {
+  min-width: 169px;
+  height: 56px;
+
+  margin-top: 88px;
+  padding: 16px 32px;
+
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+  letter-spacing: 0.04em;
+  color: var(--text-white-color);
+  background: var(--primary-color);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+
+  transition: background-color 250ms var(--timing-fn),
+    box-shadow 250ms var(--timing-fn);
+}
+.hero-btn:hover,
+.hero-btn:focus {
+  background-color: var(--button-avtive-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+/* .hero {
   padding-top: 188px;
   padding-bottom: 188px;
 
@@ -282,7 +532,7 @@ textarea {
 .hero-btn:focus {
   background-color: var(--button-avtive-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-}
+} */
 /*------------ Section About-----------*/
 .about {
   padding-top: 120px;
