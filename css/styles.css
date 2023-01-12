@@ -90,22 +90,30 @@ textarea {
   }
 }
 
-
 .section {
   padding-top: 120px;
   padding-bottom: 120px;
 }
 
 /*----- Header ----- */
-.header {
-  padding-top: 24px;
-  padding-bottom: 24px;
-}
-.header-list {
-  display: none;
-}
-.header-contacts-list {
-  display: none;
+
+@media screen and (max-width: 767px) {
+  .header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  .header-list {
+    display: none;
+  }
+  .header-contacts-list {
+    display: none;
+  }
+  .header-menu-open {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    line-height: 0;
+  }
 }
 
 .header-logo {
@@ -786,7 +794,7 @@ textarea {
   cursor: pointer;
 
   transition: background-color 250ms var(--timing-fn),
-  fill 250ms var(--timing-fn);
+    fill 250ms var(--timing-fn);
 }
 
 .modal-close:focus {
