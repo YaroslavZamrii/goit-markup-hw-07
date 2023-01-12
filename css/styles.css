@@ -96,26 +96,11 @@ textarea {
 }
 
 /*----- Header ----- */
-
-@media screen and (max-width: 767px) {
-  .header {
-    padding-top: 24px;
-    padding-bottom: 24px;
-  }
-  .header-list {
-    display: none;
-  }
-  .header-contacts-list {
-    display: none;
-  }
-  .header-menu-open {
-    background-color: transparent;
-    border: none;
-    padding: 0;
-    line-height: 0;
-  }
+.header > .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-
 .header-logo {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
@@ -128,6 +113,25 @@ textarea {
 }
 .logo-studio {
   color: var(--dark-color);
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  .header-list {
+    display: none;
+  }
+  address {
+    display: none;
+  }
+  .header-menu-open {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    line-height: 0;
+  }
 }
 /* 
 .header {
