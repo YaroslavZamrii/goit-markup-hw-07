@@ -72,7 +72,7 @@ textarea {
   margin-right: auto;
 }
 
-@media screen and (min-width: 460px) {
+@media screen and (min-width: 428px) {
   .container {
     width: 428px;
   }
@@ -653,7 +653,7 @@ textarea {
   column-gap: 16px;
 }
 .costomers-item {
-  width: 190px;
+  width: calc((100% - 16px) / 2);
   height: 88px;
 }
 .custumers-link {
@@ -688,11 +688,13 @@ textarea {
   background: var(--dark-color);
 }
 .footer > .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 72px;
   text-align: center;
+}
+.footer-descriprion {
+  margin-bottom: 72px;
+}
+.footer-media {
+  margin-bottom: 72px;
 }
 .footer-logo {
   font-family: "Raleway";
@@ -700,7 +702,6 @@ textarea {
   font-weight: 800;
   font-size: 18px;
   line-height: 1.16;
-  align-items: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--primary-color);
@@ -711,6 +712,8 @@ textarea {
 .footer-text {
   max-width: 268px;
   margin-top: 16px;
+  margin-right: auto;
+  margin-left: auto;
 
   text-align: left;
   font-size: 16px;
@@ -730,6 +733,7 @@ textarea {
 .footer-soc-list {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 16px;
 }
 .footer-soc-item {
@@ -757,9 +761,6 @@ textarea {
 .footer-subscribe {
 }
 .footer-form {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
 }
 .footer-field {
 }
@@ -800,6 +801,9 @@ textarea {
   height: 40px;
   padding: 8px 24px;
 
+  margin-right: auto;
+  margin-left: auto;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -814,18 +818,54 @@ textarea {
 }
 @media screen and (min-width: 768px) {
   .footer > .container {
+    text-align: left;
+  }
+  .footer-tablet {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 72px;
-    text-align: center;
+    gap: 24px;
   }
   .footer-input {
     width: 264px;
   }
+  .footer-input {
+    margin-bottom: 0;
+  }
+  .footer-button {
+    margin-left: 0;
+  }
 }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-container {
+    width: 584px;
+    margin: 0 auto;
+  }
+  .footer-form {
+    display: flex;
+    gap: 24px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer > .container {
+    display: flex;
+    gap: 80px;
+  }
+  .footer-tablet {
+    display: flex;
+    gap: 120px;
+  }
+  .footer-form {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  .footer-descriprion {
+    margin-bottom: 0;
+  }
+  .footer-media {
+    margin-bottom: 0;
+  }
+}
+
 /* .footer {
   background: var(--dark-color);
   padding-top: 100px;
