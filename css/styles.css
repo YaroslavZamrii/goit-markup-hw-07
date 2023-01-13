@@ -68,13 +68,13 @@ textarea {
 .container {
   padding-left: 16px;
   padding-right: 16px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 460px) {
   .container {
     width: 428px;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 
@@ -335,7 +335,6 @@ textarea {
 .hero {
   padding-top: 112px;
   padding-bottom: 112px;
-  height: 432px;
   max-width: 428px;
   margin-left: auto;
   margin-right: auto;
@@ -466,7 +465,7 @@ textarea {
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .about-text {
-    width: 356px;
+    max-width: 356px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -710,7 +709,7 @@ textarea {
   color: var(--background-white-color);
 }
 .footer-text {
-  width: 268px;
+  max-width: 268px;
   margin-top: 16px;
 
   text-align: left;
@@ -765,7 +764,7 @@ textarea {
 .footer-field {
 }
 .footer-input {
-  width: 396px;
+  width: 100%;
   height: 40px;
   padding: 8px 16px;
   margin-bottom: 16px;
@@ -797,7 +796,7 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-width: 165px;
+  max-width: 165px;
   height: 40px;
   padding: 8px 24px;
 
