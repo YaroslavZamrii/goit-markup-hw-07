@@ -128,7 +128,6 @@ textarea {
 .logo-studio {
   color: var(--dark-color);
 }
-
 @media screen and (max-width: 767px) {
   .header {
     padding-top: 24px;
@@ -281,9 +280,6 @@ textarea {
   .header-link:focus {
     color: var(--button-avtive-color);
   }
-  .current {
-    color: var(--button-avtive-color);
-  }
   .header-link.current::after {
     content: "";
     display: block;
@@ -330,6 +326,9 @@ textarea {
 
     transition: color 250ms var(--timing-fn);
   }
+}
+.current {
+  color: var(--button-avtive-color);
 }
 /*-------------- Hero ------------- */
 .hero {
@@ -385,6 +384,13 @@ textarea {
   background-color: var(--button-avtive-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+  screen and (min-resolution: 192dpi) and (max-width: 767px),
+  screen and (min-resolution: 2dppx) and (max-width: 767px) {
+  .hero {
+    background-image: var(--bg-gradient), url('../images/image_bg_mobile@2x.jpg');
+  }
+}
 @media screen and (min-width: 768px) {
   .hero {
     height: 436px;
@@ -404,6 +410,13 @@ textarea {
     margin-top: 40px;
   }
 }
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+  screen and (min-resolution: 192dpi) and (min-width: 768px),
+  screen and (min-resolution: 2dppx) and (min-width: 768px) {
+  .hero {
+    background-image: var(--bg-gradient), url('../images/image_bg_tablet@2x.jpg');
+  }
+}
 @media screen and (min-width: 1200px) {
   .hero {
     padding-top: 188px;
@@ -417,6 +430,13 @@ textarea {
   }
   .hero-btn {
     margin-top: 48px;
+  }
+}
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+  screen and (min-resolution: 192dpi) and (min-width: 1200px),
+  screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+  .hero {
+    background-image: var(--bg-gradient), url('../images/image_bg@2x.jpg');
   }
 }
 /*------------ Section About-----------*/
@@ -865,146 +885,6 @@ textarea {
     margin-bottom: 0;
   }
 }
-
-/* .footer {
-  background: var(--dark-color);
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
-.footer > .container {
-  display: flex;
-}
-
-.footer-descriprion {
-  margin-right: 120px;
-}
-
-.footer-logo {
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 1.33;
-  align-items: center;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--primary-color);
-}
-.footer-logo-studio {
-  color: var(--background-white-color);
-}
-.footer-text {
-  width: 264px;
-  margin-top: 16px;
-
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--accent-color);
-}
-.footer-media {
-  margin-right: 80px;
-}
-.footer-media-text {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #ffffff;
-
-  margin-bottom: 16px;
-}
-.footer-soc-list {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-.footer-soc-item {
-  width: 40px;
-  height: 40px;
-}
-.footer-soc-link {
-  width: 100%;
-  height: 100%;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-
-  fill: var(--light-background-color);
-  transition: background-color 250ms var(--timing-fn);
-}
-
-.footer-soc-link:hover,
-.footer-soc-link:focus {
-  background-color: #31d0aa;
-}
-
-.footer-soc-icon {
-}
-
-.footer-subscribe {
-}
-.footer-media-text {
-}
-.footer-form {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
-.footer-field {
-}
-.footer-input {
-  width: 264px;
-  height: 40px;
-  padding: 8px 16px;
-
-  font-size: 12px;
-  line-height: 2;
-  letter-spacing: 0.04em;
-  color: rgba(255, 255, 255, 0.6);
-
-  background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  border-radius: 4px;
-}
-.footer-input::placeholder {
-  font-size: 12px;
-  line-height: 2;
-  letter-spacing: 0.04em;
-  color: rgba(255, 255, 255, 0.6);
-}
-.footer-field input:focus-within {
-  outline: none;
-  border: 1px solid var(--primary-color);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-}
-.footer-label {
-}
-.footer-button {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-width: 165px;
-  height: 40px;
-  padding: 8px 24px;
-
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  color: var(--background-white-color);
-  fill: var(--background-white-color);
-
-  background: var(--primary-color);
-  border-radius: 4px;
-  border-color: transparent;
-  cursor: pointer;
-} */
-
 /*------------ Portfolio -----------------*/
 .portfolio {
   padding-top: 96px;
