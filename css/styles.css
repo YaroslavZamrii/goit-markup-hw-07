@@ -158,6 +158,11 @@ textarea {
   .mobile-menu-container {
     padding: 40px 40px;
   }
+  .mobile-menu-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
   .mobile-menu-close-btn {
     display: flex;
     align-items: center;
@@ -199,6 +204,8 @@ textarea {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
+  }
+  .mobile-menu-address {
   }
   .mobile-address-item {
     margin-bottom: 40px;
@@ -388,7 +395,8 @@ textarea {
   screen and (min-resolution: 192dpi) and (max-width: 767px),
   screen and (min-resolution: 2dppx) and (max-width: 767px) {
   .hero {
-    background-image: var(--bg-gradient), url('../images/image_bg_mobile@2x.jpg');
+    background-image: var(--bg-gradient),
+      url("../images/image_bg_mobile@2x.jpg");
   }
 }
 @media screen and (min-width: 768px) {
@@ -414,7 +422,8 @@ textarea {
   screen and (min-resolution: 192dpi) and (min-width: 768px),
   screen and (min-resolution: 2dppx) and (min-width: 768px) {
   .hero {
-    background-image: var(--bg-gradient), url('../images/image_bg_tablet@2x.jpg');
+    background-image: var(--bg-gradient),
+      url("../images/image_bg_tablet@2x.jpg");
   }
 }
 @media screen and (min-width: 1200px) {
@@ -436,7 +445,7 @@ textarea {
   screen and (min-resolution: 192dpi) and (min-width: 1200px),
   screen and (min-resolution: 2dppx) and (min-width: 1200px) {
   .hero {
-    background-image: var(--bg-gradient), url('../images/image_bg@2x.jpg');
+    background-image: var(--bg-gradient), url("../images/image_bg@2x.jpg");
   }
 }
 /*------------ Section About-----------*/
